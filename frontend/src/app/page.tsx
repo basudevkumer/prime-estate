@@ -1,31 +1,27 @@
 export default function HomePage() {
   return (
-    <main className="ambient-bg section-padding">
+    <main className="section-padding">
       <div className="container-premium">
-
-        <h1 className="display-xl text-gradient">
+        <h1
+          className="
+            font-heading
+            display-xl
+            text-gradient
+          "
+        >
           Prime Estate
         </h1>
 
-        <div
+        <p
           className="
-          glass-card
-          gradient-border
-          hover-lift
-          p-8
-          mt-10
-        "
+            font-body
+            body-lg
+            mt-6
+          "
         >
-          <h2 className="heading-2">
-            Luxury Living
-          </h2>
-
-          <p className="body-lg mt-4">
-            Premium PropTech Experience
-          </p>
-        </div>
-
+          Luxury Property Platform
+        </p>
       </div>
     </main>
   );
-}
+} 

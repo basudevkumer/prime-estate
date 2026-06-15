@@ -16,8 +16,11 @@ html {
 
 body {
   background: var(--color-background);
+
   color: var(--color-text-primary);
+
   font-family: var(--font-inter);
+
   overflow-x: hidden;
 }
 
