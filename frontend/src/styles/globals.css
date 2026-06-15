@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+@import "./components.css";
+@import "./utilities.css";
+@import "./animations.css";
+@import "./layout.css";
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #3b82f6;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101828;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #23314d;
+  border-radius: 999px;
+}
