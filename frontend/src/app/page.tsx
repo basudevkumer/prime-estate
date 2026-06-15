@@ -1,16 +1,29 @@
-import {
-  propertyService,
-} from "@/services/property.service";
+"use client";
 
-export default async function HomePage() {
-  const properties =
-    await propertyService.getAll();
+import {
+  useWishlistStore,
+} from "@/store";
+
+export default function HomePage() {
+  const {
+    propertyIds,
+    addToWishlist,
+  } = useWishlistStore();
 
   return (
-    <main>
-      <h1>
-        {properties[0].title}
-      </h1>
+    <main className="p-10">
+      <button
+        onClick={() =>
+          addToWishlist("1")
+        }
+      >
+        Add Wishlist
+      </button>
+
+      <p>
+        Total:
+        {propertyIds.length}
+      </p>
     </main>
   );
 }
