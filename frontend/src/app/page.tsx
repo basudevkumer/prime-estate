@@ -1,6 +1,11 @@
-import { properties } from "@/data/properties";
+import {
+  propertyService,
+} from "@/services/property.service";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const properties =
+    await propertyService.getAll();
+
   return (
     <main>
       <h1>
