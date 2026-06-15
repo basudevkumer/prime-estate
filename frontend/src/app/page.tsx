@@ -1,29 +1,37 @@
-"use client";
-
 import {
-  useWishlistStore,
-} from "@/store";
+  Button,
+} from "@/components/ui";
 
 export default function HomePage() {
-  const {
-    propertyIds,
-    addToWishlist,
-  } = useWishlistStore();
-
   return (
-    <main className="p-10">
-      <button
-        onClick={() =>
-          addToWishlist("1")
-        }
-      >
-        Add Wishlist
-      </button>
+    <main className="p-10 flex gap-4 flex-wrap">
 
-      <p>
-        Total:
-        {propertyIds.length}
-      </p>
+      <Button>
+        Primary
+      </Button>
+
+      <Button
+        variant="secondary"
+      >
+        Secondary
+      </Button>
+
+      <Button
+        variant="ghost"
+      >
+        Ghost
+      </Button>
+
+      <Button
+        variant="gradient"
+      >
+        Gradient
+      </Button>
+
+      <Button loading>
+        Submit
+      </Button>
+
     </main>
   );
 }
