@@ -1,9 +1,11 @@
-import { HeroSection } from "@/features/home";
+import { HeroSection, PropertySearch } from "@/features/home";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+
+      <PropertySearch />
     </>
   );
 }
