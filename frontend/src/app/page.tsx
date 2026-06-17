@@ -1,36 +1,54 @@
 import {
+  Input,
+  Textarea,
   Button,
+  FormField,
 } from "@/components/ui";
 
 export default function HomePage() {
   return (
-    <main className="p-10 flex gap-4 flex-wrap">
+    <main className="container-premium py-20">
 
-      <Button>
-        Primary
-      </Button>
-
-      <Button
-        variant="secondary"
+      <div
+        className="
+        glass-card
+        p-8
+        max-w-xl
+      "
       >
-        Secondary
-      </Button>
+        <FormField
+          label="Full Name"
+        >
+          <Input
+            placeholder="John Doe"
+          />
+        </FormField>
 
-      <Button
-        variant="ghost"
-      >
-        Ghost
-      </Button>
+        <FormField
+          label="Email"
+          className="mt-5"
+        >
+          <Input
+            type="email"
+            placeholder="john@example.com"
+          />
+        </FormField>
 
-      <Button
-        variant="gradient"
-      >
-        Gradient
-      </Button>
+        <FormField
+          label="Message"
+          className="mt-5"
+        >
+          <Textarea
+            placeholder="Write your message..."
+          />
+        </FormField>
 
-      <Button loading>
-        Submit
-      </Button>
+        <Button
+          className="mt-6"
+        >
+          Submit
+        </Button>
+      </div>
 
     </main>
   );
