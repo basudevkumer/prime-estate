@@ -2,4 +2,6 @@ export * from "./partners";
 
 export * from "./properties";
 
-export * from "./property-categories";
+export * from "./property-categories"; 
+
+export * from "./testimonials"

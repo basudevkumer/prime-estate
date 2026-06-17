@@ -5,7 +5,8 @@ import {
   FeaturedProperties,
   WhyChoose,
   PropertyCategories,
-  MapPreview
+  MapPreview,
+  Testimonials
 } from "@/features/home";
 
 export default function HomePage() {
@@ -21,7 +22,9 @@ export default function HomePage() {
 
       <PropertyCategories />
 
-       <MapPreview />
+      <MapPreview />
+
+      <Testimonials />
 
       <WhyChoose />
     </>
