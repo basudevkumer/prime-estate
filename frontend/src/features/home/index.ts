@@ -7,3 +7,5 @@ export * from "./components/trusted-partners";
 export * from "./components/featured-properties";
 
 export * from "./components/why-choose";    
+
+export * from "./components/property-categories"
