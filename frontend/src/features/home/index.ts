@@ -5,3 +5,5 @@ export * from "./components/property-search";
 export * from "./components/trusted-partners";
 
 export * from "./components/featured-properties";
+
+export * from "./components/why-choose";    
