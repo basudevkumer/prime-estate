@@ -3,37 +3,37 @@ import { Property } from "@/types";
 export const properties: Property[] = [
   {
     id: "1",
-
-    title: "Skyline Penthouse",
-
-    slug: "skyline-penthouse",
-
-    description: "Luxury penthouse in downtown skyline.",
-
-    price: 2500000,
-
-    location: "Manhattan",
-
-    city: "New York",
-
-    country: "USA",
-
-    bedrooms: 4,
-
-    bathrooms: 3,
-
-    area: 4200,
-
+    title: "Ocean View Villa",
+    location: "Miami, Florida",
+    price: 4500000,
+    bedrooms: 5,
+    bathrooms: 4,
+    area: 6200,
     image: "/images/property-1.jpg",
-
-    gallery: [],
-
     featured: true,
+  },
 
-    category: "Penthouse",
+  {
+    id: "2",
+    title: "Skyline Penthouse",
+    location: "New York City",
+    price: 6200000,
+    bedrooms: 4,
+    bathrooms: 4,
+    area: 5400,
+    image: "/images/property-2.jpg",
+    featured: true,
+  },
 
-    type: "sale",
-
-    createdAt: "2026-06-15",
+  {
+    id: "3",
+    title: "Modern Smart Residence",
+    location: "Los Angeles",
+    price: 3800000,
+    bedrooms: 6,
+    bathrooms: 5,
+    area: 7100,
+    image: "/images/property-3.jpg",
+    featured: true,
   },
 ];

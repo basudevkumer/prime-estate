@@ -1,4 +1,4 @@
-import { HeroSection, PropertySearch,TrustedPartners } from "@/features/home";
+import { HeroSection, PropertySearch,TrustedPartners,FeaturedProperties } from "@/features/home";
 
 export default function HomePage() {
   return (
@@ -8,6 +8,8 @@ export default function HomePage() {
       <PropertySearch />
 
       <TrustedPartners />
+
+      <FeaturedProperties />
     </>
   );
 }

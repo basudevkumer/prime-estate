@@ -1,5 +1,5 @@
 export function formatPrice(
-  value: number
+  price: number
 ) {
   return new Intl.NumberFormat(
     "en-US",
@@ -8,5 +8,5 @@ export function formatPrice(
       currency: "USD",
       maximumFractionDigits: 0,
     }
-  ).format(value);
-}
+  ).format(price);
+} 
