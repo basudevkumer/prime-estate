@@ -1,19 +1,20 @@
-import { PropertyCard } from "@/components/ui";
-import { properties } from "@/data/properties";
-
-
-
 export default function HomePage() {
   return (
     <main
       className="
+      section-padding
       container-premium
-      py-20
     "
     >
-      <PropertyCard
-        property={properties[0]}
-      />
+      <h1
+        className="
+        display-xl
+        font-heading
+        text-gradient
+      "
+      >
+        Prime Estate
+      </h1>
     </main>
   );
 }
