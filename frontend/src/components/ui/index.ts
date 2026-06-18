@@ -15,3 +15,5 @@ export * from "./feature-card";
 export * from "./stats-card";
 
 export * from "./property-card";
+
+export * from "./accordion";

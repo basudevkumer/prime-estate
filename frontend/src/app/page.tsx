@@ -7,7 +7,8 @@ import {
   PropertyCategories,
   MapPreview,
   Testimonials,
-  MarketInsights
+  MarketInsights,
+  FAQSection,
 } from "@/features/home";
 
 export default function HomePage() {
@@ -29,7 +30,9 @@ export default function HomePage() {
 
       <WhyChoose />
 
-       <MarketInsights />
+      <MarketInsights />
+
+       <FAQSection />
     </>
   );
 }
