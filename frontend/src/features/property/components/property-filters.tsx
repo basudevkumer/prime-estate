@@ -7,9 +7,7 @@ import {
   BATHROOM_OPTIONS,
 } from "@/constants";
 
-import {
-  usePropertyFilterStore,
-} from "@/store";
+import { usePropertyFilterStore } from "@/store";
 
 import { Button } from "@/components/ui";
 
@@ -20,6 +18,13 @@ export function PropertyFilters() {
     priceRange,
     bedrooms,
     bathrooms,
+
+    setLocation,
+    setPropertyType,
+    setPriceRange,
+    setBedrooms,
+    setBathrooms,
+
     clearFilters,
   } = usePropertyFilterStore();
 
@@ -61,7 +66,6 @@ export function PropertyFilters() {
       </div>
 
       <div className="space-y-5">
-
         {/* Location */}
 
         <div>
@@ -78,6 +82,7 @@ export function PropertyFilters() {
 
           <input
             value={location}
+            onChange={(e) => setLocation(e.target.value)}
             placeholder="Miami"
             className="
             w-full
@@ -108,6 +113,7 @@ export function PropertyFilters() {
 
           <select
             value={propertyType}
+            onChange={(e) => setPropertyType(e.target.value)}
             className="
             w-full
             h-12
@@ -118,15 +124,9 @@ export function PropertyFilters() {
             border-white/10
             "
           >
-            {PROPERTY_TYPES.map(
-              (item) => (
-                <option
-                  key={item}
-                >
-                  {item}
-                </option>
-              )
-            )}
+            {PROPERTY_TYPES.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
           </select>
         </div>
 
@@ -146,6 +146,7 @@ export function PropertyFilters() {
 
           <select
             value={priceRange}
+            onChange={(e) => setPriceRange(e.target.value)}
             className="
             w-full
             h-12
@@ -156,15 +157,9 @@ export function PropertyFilters() {
             border-white/10
             "
           >
-            {PRICE_RANGES.map(
-              (item) => (
-                <option
-                  key={item}
-                >
-                  {item}
-                </option>
-              )
-            )}
+            {PRICE_RANGES.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
           </select>
         </div>
 
@@ -184,6 +179,7 @@ export function PropertyFilters() {
 
           <select
             value={bedrooms}
+            onChange={(e) => setBedrooms(e.target.value)}
             className="
             w-full
             h-12
@@ -194,15 +190,9 @@ export function PropertyFilters() {
             border-white/10
             "
           >
-            {BEDROOM_OPTIONS.map(
-              (item) => (
-                <option
-                  key={item}
-                >
-                  {item}
-                </option>
-              )
-            )}
+            {BEDROOM_OPTIONS.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
           </select>
         </div>
 
@@ -222,6 +212,7 @@ export function PropertyFilters() {
 
           <select
             value={bathrooms}
+            onChange={(e) => setBathrooms(e.target.value)}
             className="
             w-full
             h-12
@@ -232,25 +223,15 @@ export function PropertyFilters() {
             border-white/10
             "
           >
-            {BATHROOM_OPTIONS.map(
-              (item) => (
-                <option
-                  key={item}
-                >
-                  {item}
-                </option>
-              )
-            )}
+            {BATHROOM_OPTIONS.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
           </select>
         </div>
 
-        <Button
-          variant="gradient"
-          fullWidth
-        >
+        <Button variant="gradient" fullWidth>
           Apply Filters
         </Button>
-
       </div>
     </aside>
   );

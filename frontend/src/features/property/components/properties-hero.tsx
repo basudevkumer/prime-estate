@@ -18,7 +18,6 @@ export function PropertiesHero() {
       />
 
       <div className="container-premium relative z-10">
-
         <p
           className="
           text-blue-400
@@ -37,8 +36,7 @@ export function PropertiesHero() {
           mt-4
           "
         >
-          Explore Luxury
-          Properties
+          Explore Luxury Properties
         </h1>
 
         <p
@@ -48,11 +46,9 @@ export function PropertiesHero() {
           max-w-2xl
           "
         >
-          Browse verified luxury homes,
-          villas, apartments, penthouses,
-          and investment opportunities.
+          Browse verified luxury homes, villas, apartments, penthouses, and
+          investment opportunities.
         </p>
-
       </div>
     </section>
   );

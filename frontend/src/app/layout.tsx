@@ -31,10 +31,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`
-          ${outfit.variable}
-          ${inter.variable}
-        `}
+        suppressHydrationWarning
+        className={`  ${outfit.variable}  ${inter.variable}  `}
       >
         <Providers>
           <Navbar />
