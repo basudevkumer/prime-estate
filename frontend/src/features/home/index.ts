@@ -13,3 +13,5 @@ export * from "./components/property-categories";
 export * from "./components/map-preview"; 
 
 export  * from "./components/testimonials"
+
+export * from "./components/market-insights";

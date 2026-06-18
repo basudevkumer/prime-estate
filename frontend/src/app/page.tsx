@@ -6,7 +6,8 @@ import {
   WhyChoose,
   PropertyCategories,
   MapPreview,
-  Testimonials
+  Testimonials,
+  MarketInsights
 } from "@/features/home";
 
 export default function HomePage() {
@@ -27,6 +28,8 @@ export default function HomePage() {
       <Testimonials />
 
       <WhyChoose />
+
+       <MarketInsights />
     </>
   );
 }
