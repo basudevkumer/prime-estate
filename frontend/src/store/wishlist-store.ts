@@ -1,29 +1,48 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
+import { Property } from "@/types";
 
-interface WishlistStore {
-  propertyIds: string[];
+interface WishlistState {
+  items: Property[];
 
-  addToWishlist: (id: string) => void;
-
-  removeFromWishlist: (id: string) => void;
+  toggleWishlist: (property: Property) => void;
+  isWishlisted: (id: string) => boolean;
+  clearWishlist: () => void;
 }
 
-export const useWishlistStore = create<WishlistStore>((set) => ({
-  propertyIds: [],
+export const useWishlistStore = create<WishlistState>()(
+  persist(
+    (set, get) => ({
+      items: [],
 
-  addToWishlist: (id) =>
-    set((state) => {
-      if (state.propertyIds.includes(id)) {
-        return state;
-      }
+      toggleWishlist: (property) => {
+        const exists = get().items.find(
+          (item) => item.id === property.id
+        );
 
-      return {
-        propertyIds: [...state.propertyIds, id],
-      };
+        if (exists) {
+          set({
+            items: get().items.filter(
+              (item) => item.id !== property.id
+            ),
+          });
+        } else {
+          set({
+            items: [...get().items, property],
+          });
+        }
+      },
+
+      isWishlisted: (id) => {
+        return get().items.some(
+          (item) => item.id === id
+        );
+      },
+
+      clearWishlist: () => set({ items: [] }),
     }),
-
-  removeFromWishlist: (id) =>
-    set((state) => ({
-      propertyIds: state.propertyIds.filter((item) => item !== id),
-    })),
-}));
+    {
+      name: "prime-estate-wishlist",
+    }
+  )
+);

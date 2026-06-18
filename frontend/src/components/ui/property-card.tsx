@@ -9,6 +9,7 @@ import { TbRulerMeasure } from "react-icons/tb";
 
 import { Property } from "@/types";
 import { formatPrice } from "@/utils";
+import { useWishlistStore } from "@/store/wishlist-store";
 
 import { Card } from "./card";
 
@@ -18,6 +19,10 @@ interface PropertyCardProps {
 }
 
 export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
+  const { toggleWishlist, isWishlisted } = useWishlistStore();
+
+  const liked = isWishlisted(property.id);
+
   // =========================
   // GRID VIEW
   // =========================
@@ -40,16 +45,18 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
 
           {/* FAVORITE */}
           <button
+            onClick={() => toggleWishlist(property)}
             className="
-              absolute top-4 right-4
-              h-11 w-11
-              rounded-full
-              bg-black/30
-              backdrop-blur-md
-              flex items-center justify-center
-            "
+    absolute top-4 right-4
+    h-11 w-11
+    rounded-full
+    bg-black/30
+    backdrop-blur-md
+    flex items-center justify-center
+    transition
+  "
           >
-            <RiHeartLine />
+            <RiHeartLine className={liked ? "text-red-500 fill-red-500" : ""} />
           </button>
 
           {/* FEATURED BADGE */}
@@ -115,16 +122,18 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
 
         {/* FAVORITE */}
         <button
+          onClick={() => toggleWishlist(property)}
           className="
-            absolute top-3 right-3
-            h-10 w-10
-            rounded-full
-            bg-black/30
-            backdrop-blur-md
-            flex items-center justify-center
-          "
+    absolute top-4 right-4
+    h-11 w-11
+    rounded-full
+    bg-black/30
+    backdrop-blur-md
+    flex items-center justify-center
+    transition
+  "
         >
-          <RiHeartLine />
+          <RiHeartLine className={liked ? "text-red-500 fill-red-500" : ""} />
         </button>
       </div>
 
