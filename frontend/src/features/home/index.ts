@@ -17,3 +17,5 @@ export * from "./components/testimonials";
 export * from "./components/market-insights";
 
 export * from "./components/faq-section";
+
+export * from "./components/cta-section";

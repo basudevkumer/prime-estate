@@ -9,6 +9,7 @@ import {
   Testimonials,
   MarketInsights,
   FAQSection,
+  CTASection,
 } from "@/features/home";
 
 export default function HomePage() {
@@ -32,7 +33,9 @@ export default function HomePage() {
 
       <MarketInsights />
 
-       <FAQSection />
+      <FAQSection />
+
+      <CTASection />
     </>
   );
 }
