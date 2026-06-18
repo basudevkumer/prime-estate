@@ -21,6 +21,7 @@ import { Card } from "./card";
 
 interface PropertyCardProps {
   property: Property;
+  view?: "grid" | "list";
 }
 
 export function PropertyCard({

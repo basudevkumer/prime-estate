@@ -7,3 +7,5 @@ export * from "./filter-store";
 export * from "./recently-viewed-store";
 
 export * from "./property-filter-store";
+
+export * from "./property-view-store";

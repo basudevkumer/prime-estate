@@ -45,7 +45,7 @@ export interface Property {
   bedrooms: number;
   bathrooms: number;
   area: number;
-
+  
   image: string;
 
   featured: boolean;

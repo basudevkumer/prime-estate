@@ -1,62 +1,47 @@
 "use client";
 
 import { PropertyCard } from "@/components/ui";
+import { properties } from "@/data";
 import { useFilteredProperties } from "@/hooks/use-filtered-properties";
+import { usePropertyViewStore } from "@/store";
 
 export function PropertyGrid() {
-  const properties = useFilteredProperties();
+  const { view, sort } = usePropertyViewStore();
 
-  if (properties.length === 0) {
-    return (
-      <div
-        className="
-        glass-card
-        p-10
-        text-center
-        "
-      >
-        <h3
-          className="
-          text-2xl
-          font-semibold
-          "
-        >
-          No Properties Found
-        </h3>
+  let sorted = [...properties];
 
-        <p
-          className="
-          text-slate-400
-          mt-3
-          "
-        >
-          Try adjusting your filters.
-        </p>
-      </div>
-    );
+  if (sort === "price_low") {
+    sorted.sort((a, b) => a.price - b.price);
+  }
+
+  if (sort === "price_high") {
+    sorted.sort((a, b) => b.price - a.price);
+  }
+
+  // mock newest (id based)
+  if (sort === "newest") {
+    sorted.sort((a, b) => Number(b.id) - Number(a.id));
   }
 
   return (
     <>
-      <div
-        className="
-        mb-6
-        text-slate-400
-        "
-      >
-        {properties.length} Properties Found
+      <div className="mb-6 text-slate-400">
+        {sorted.length} Properties Found
       </div>
 
       <div
-        className="
-        grid
-        md:grid-cols-2
-        xl:grid-cols-3
-        gap-8
-        "
+        className={
+          view === "grid"
+            ? "grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+            : "flex flex-col gap-6"
+        }
       >
-        {properties.map((property) => (
-          <PropertyCard key={property.id} property={property} />
+        {sorted.map((property) => (
+          <PropertyCard
+            key={property.id}
+            property={property}
+            view={view} // future use (list UI)
+          />
         ))}
       </div>
     </>
