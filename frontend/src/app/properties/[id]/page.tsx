@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { propertyService } from "@/services/property.service";
 
 import { PropertyHeader } from "@/features/property-details/components/property-header";
-
+import { PropertyFeatures } from "@/features/property-details/components/property-features";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -39,6 +39,7 @@ export default async function PropertyDetailsPage({
       <Gallery images={galleryImages} />
 
       <PropertyHeader property={property} />
+      <PropertyFeatures property={property} />
     </main>
   );
 }

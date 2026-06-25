@@ -1,8 +1,12 @@
 export interface Property {
   id: string;
+
   title: string;
   location: string;
+
   type: string;
+
+  description?: string;
 
   price: number;
 
