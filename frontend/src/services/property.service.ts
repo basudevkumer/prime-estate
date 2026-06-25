@@ -1,26 +1,32 @@
-import { properties } from "@/data/properties";
+import { properties } from "@/data";
+import { Property } from "@/types";
 
 export const propertyService = {
-  async getAll() {
-    return Promise.resolve(properties);
+  getAll(): Property[] {
+    return properties;
   },
 
-  async getFeatured() {
-    return Promise.resolve(
-      properties.filter(
-        property => property.featured
-      )
+  getById(id: string): Property | undefined {
+    return properties.find(
+      (property) => property.id === id
     );
   },
 
-  async getBySlug(
-    slug: string
-  ) {
-    return Promise.resolve(
-      properties.find(
-        property =>
-          property.slug === slug
-      )
+  getFeatured(): Property[] {
+    return properties.filter(
+      (property) => property.featured
     );
+  },
+
+  getRelated(
+    currentId: string,
+    limit = 3
+  ): Property[] {
+    return properties
+      .filter(
+        (property) =>
+          property.id !== currentId
+      )
+      .slice(0, limit);
   },
 };
