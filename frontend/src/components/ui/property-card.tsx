@@ -23,12 +23,24 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
 
   const liked = isWishlisted(property.id);
 
+  
+
   // =========================
   // GRID VIEW
   // =========================
   if (view === "grid") {
     return (
-      <Card className="overflow-hidden group cursor-pointer">
+      <Card
+        className="
+  overflow-hidden
+  group
+  cursor-pointer
+  transition-all
+  duration-500
+  hover:-translate-y-2
+  hover:shadow-2xl
+  "
+      >
         {/* IMAGE */}
         <div className="relative h-72">
           <Image
@@ -56,7 +68,13 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
     transition
   "
           >
-            <RiHeartLine className={liked ? "text-red-500 fill-red-500" : ""} />
+            <RiHeartLine
+              className={`
+    transition-all
+    duration-300
+    ${liked ? "text-red-500 scale-110" : ""}
+  `} 
+            />
           </button>
 
           {/* FEATURED BADGE */}
@@ -105,7 +123,16 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
   // LIST VIEW
   // =========================
   return (
-    <Card className="overflow-hidden group flex">
+    <Card
+      className="
+  overflow-hidden
+  group
+  flex
+  transition-all
+  duration-500
+  hover:-translate-y-1
+  "
+    >
       {/* IMAGE */}
       <div className="relative w-72 h-56 flex-shrink-0">
         <Image
@@ -124,16 +151,24 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
         <button
           onClick={() => toggleWishlist(property)}
           className="
-    absolute top-4 right-4
-    h-11 w-11
-    rounded-full
-    bg-black/30
-    backdrop-blur-md
-    flex items-center justify-center
-    transition
-  "
+absolute top-4 right-4
+h-11 w-11
+rounded-full
+bg-black/30
+backdrop-blur-md
+flex items-center justify-center
+transition-all
+duration-300
+hover:scale-110
+"
         >
-          <RiHeartLine className={liked ? "text-red-500 fill-red-500" : ""} />
+          <RiHeartLine
+            className={`
+    transition-all
+    duration-300
+    ${liked ? "text-red-500 scale-110" : ""}
+  `}
+          />
         </button>
       </div>
 

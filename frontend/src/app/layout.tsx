@@ -6,6 +6,7 @@ import Providers from "@/providers";
 
 import "@/styles/globals.css";
 import { Navbar, Footer } from "@/components/layout";
+import { Toaster } from "react-hot-toast";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -40,6 +41,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
 
           <Footer />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 3000,
+            }}
+          />
         </Providers>
       </body>
     </html>

@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { Property } from "@/types";
+import toast from "react-hot-toast";
 
 interface WishlistState {
   items: Property[];
@@ -16,33 +17,33 @@ export const useWishlistStore = create<WishlistState>()(
       items: [],
 
       toggleWishlist: (property) => {
-        const exists = get().items.find(
-          (item) => item.id === property.id
-        );
+        const exists = get().items.find((item) => item.id === property.id);
 
         if (exists) {
           set({
-            items: get().items.filter(
-              (item) => item.id !== property.id
-            ),
+            items: get().items.filter((item) => item.id !== property.id),
           });
-        } else {
-          set({
-            items: [...get().items, property],
-          });
+
+          toast.success(`${property.title} removed from wishlist`);
+
+          return;
         }
+
+        set({
+          items: [...get().items, property],
+        });
+
+        toast.success(`${property.title} added to wishlist`);
       },
 
       isWishlisted: (id) => {
-        return get().items.some(
-          (item) => item.id === id
-        );
+        return get().items.some((item) => item.id === id);
       },
 
       clearWishlist: () => set({ items: [] }),
     }),
     {
       name: "prime-estate-wishlist",
-    }
-  )
+    },
+  ),
 );
