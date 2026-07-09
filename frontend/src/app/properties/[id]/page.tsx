@@ -4,6 +4,7 @@ import { propertyService } from "@/services/property.service";
 
 import { PropertyHeader } from "@/features/property-details/components/property-header";
 import { PropertyFeatures } from "@/features/property-details/components/property-features";
+import { PropertySidebar } from "@/features/property-details/components/property-sidebar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -39,7 +40,20 @@ export default async function PropertyDetailsPage({
       <Gallery images={galleryImages} />
 
       <PropertyHeader property={property} />
-      <PropertyFeatures property={property} />
+      <div
+        className="
+  mt-20
+  grid
+  lg:grid-cols-3
+  gap-10
+  "
+      >
+        <div className="lg:col-span-2">
+          <PropertyFeatures property={property} />
+        </div>
+
+        <PropertySidebar />
+      </div>
     </main>
   );
 }
