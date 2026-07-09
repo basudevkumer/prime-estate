@@ -6,7 +6,9 @@ import { PropertyHeader } from "@/features/property-details/components/property-
 import { PropertyFeatures } from "@/features/property-details/components/property-features";
 import { PropertySidebar } from "@/features/property-details/components/property-sidebar";
 import type { Metadata } from "next";
+import { PropertyMap } from "@/features/property-details/components/property-map";
 
+import { RelatedProperties } from "@/features/property-details/components/related-properties";
 export const metadata: Metadata = {
   title: "Property Details",
 };
@@ -23,7 +25,7 @@ export default async function PropertyDetailsPage({
   const { id } = await params;
 
   const property = propertyService.getById(id);
-
+  const relatedProperties = propertyService.getRelated(id);
   if (!property) {
     notFound();
   }
@@ -54,6 +56,13 @@ export default async function PropertyDetailsPage({
 
         <PropertySidebar />
       </div>
+      <PropertyMap
+  location={property.location}
+/>
+
+<RelatedProperties
+  properties={relatedProperties}
+/>
     </main>
   );
 }

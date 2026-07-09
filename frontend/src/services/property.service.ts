@@ -7,26 +7,16 @@ export const propertyService = {
   },
 
   getById(id: string): Property | undefined {
-    return properties.find(
-      (property) => property.id === id
-    );
+    return properties.find((property) => property.id === id);
   },
 
   getFeatured(): Property[] {
-    return properties.filter(
-      (property) => property.featured
-    );
+    return properties.filter((property) => property.featured);
   },
 
-  getRelated(
-    currentId: string,
-    limit = 3
-  ): Property[] {
+  getRelated(currentId: string, limit = 3): Property[] {
     return properties
-      .filter(
-        (property) =>
-          property.id !== currentId
-      )
+      .filter((property) => property.id !== currentId)
       .slice(0, limit);
   },
 };
