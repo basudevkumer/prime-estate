@@ -18,7 +18,9 @@ interface PropertyDetailsPageProps {
     id: string;
   }>;
 }
+import { MortgageCalculator } from "@/features/property-details/components/mortgage-calculator";
 
+import { ScheduleVisitModal } from "@/features/property-details/components/schedule-visit-modal";
 export default async function PropertyDetailsPage({
   params,
 }: PropertyDetailsPageProps) {
@@ -59,7 +61,11 @@ export default async function PropertyDetailsPage({
       <PropertyMap
   location={property.location}
 />
+<MortgageCalculator />
 
+<div className="mt-16 flex justify-center">
+  <ScheduleVisitModal />
+</div>
 <RelatedProperties
   properties={relatedProperties}
 />

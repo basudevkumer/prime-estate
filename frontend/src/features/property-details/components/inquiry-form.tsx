@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui";
-
+import { ScheduleVisitModal } from "./schedule-visit-modal";
 export function InquiryForm() {
   return (
     <div
@@ -49,12 +49,7 @@ export function InquiryForm() {
           Send Inquiry
         </Button>
 
-        <Button
-          variant="outline"
-          fullWidth
-        >
-          Schedule Visit
-        </Button>
+      <ScheduleVisitModal />
       </div>
     </div>
   );
