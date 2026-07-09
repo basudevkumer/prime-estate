@@ -69,6 +69,7 @@ export default async function PropertyDetailsPage({
 <RelatedProperties
   properties={relatedProperties}
 />
+<PropertyReviews />
     </main>
   );
 }
