@@ -21,6 +21,7 @@ interface PropertyDetailsPageProps {
 import { MortgageCalculator } from "@/features/property-details/components/MortgageCalculator";
 
 import { ScheduleVisitModal } from "@/features/property-details/components/ScheduleVisitModal";
+import { PropertyReviews } from "@/features/property-details/components/PropertyReviews";
 export default async function PropertyDetailsPage({
   params,
 }: PropertyDetailsPageProps) {
@@ -32,12 +33,10 @@ export default async function PropertyDetailsPage({
     notFound();
   }
 
-  const galleryImages = [
-    property.image,
-    property.image,
-    property.image,
-    property.image,
-  ];
+  const galleryImages =
+    property.gallery && property.gallery.length >= 4
+      ? property.gallery
+      : [property.image, property.image, property.image, property.image];
 
   return (
     <main className="container-premium  py-16">

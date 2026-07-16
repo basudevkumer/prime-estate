@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { StatsCard } from "@/components/ui/StatsCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { faqs } from "@/data/faqs";
@@ -117,9 +118,19 @@ export default function AboutPage() {
                     <RiStarFill key={i} size={16} />
                   ))}
                 </div>
-                <div className="mt-3">
-                  <p className="font-semibold">{t.name}</p>
-                  <p className="text-sm text-slate-500">{t.role}</p>
+                <div className="mt-3 flex items-center gap-3">
+                  <div className="relative h-10 w-10 rounded-full overflow-hidden ring-2 ring-blue-500/30">
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold">{t.name}</p>
+                    <p className="text-sm text-slate-500">{t.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
