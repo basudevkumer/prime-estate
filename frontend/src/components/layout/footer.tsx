@@ -14,62 +14,34 @@ import {
 export function Footer() {
   return (
     <footer
-      className="
-      relative
-      overflow-hidden
-      border-t
-      border-white/10
-      "
+      className="relative overflow-hidden border-t border-white/10"
     >
       {/* Glow */}
 
       <div
-        className="
-        absolute
-        inset-0
-        bg-blue-500/5
-        blur-[160px]
-        pointer-events-none
-        "
+        className="absolute inset-0 bg-blue-500/5 blur-[160px] pointer-events-none"
       />
 
       <div
-        className="
-        container-premium
-        relative
-        z-10
-        "
+        className="container-premium relative z-10"
       >
         {/* Main Footer */}
 
         <div
-          className="
-          py-20
-          grid
-          gap-12
-          lg:grid-cols-6
-          "
+          className="py-20 grid gap-12 lg:grid-cols-6"
         >
           {/* Brand */}
 
           <div className="lg:col-span-2">
 
             <h3
-              className="
-              text-2xl
-              font-bold
-              text-gradient
-              "
+              className="text-2xl font-bold text-gradient"
             >
               Prime Estate
             </h3>
 
             <p
-              className="
-              mt-4
-              text-slate-400
-              max-w-sm
-              "
+              className="mt-4 text-slate-400 max-w-sm"
             >
               Discover premium properties,
               connect with verified agents,
@@ -79,11 +51,7 @@ export function Footer() {
             {/* Social */}
 
             <div
-              className="
-              flex
-              gap-4
-              mt-6
-              "
+              className="flex gap-4 mt-6"
             >
               <button className="glass-card p-3">
                 <RiFacebookFill />
@@ -117,11 +85,7 @@ export function Footer() {
                   <li key={item}>
                     <Link
                       href="/"
-                      className="
-                      text-slate-400
-                      hover:text-white
-                      transition-colors
-                      "
+                      className="text-slate-400 hover:text-white transition-colors"
                     >
                       {item}
                     </Link>
@@ -144,11 +108,7 @@ export function Footer() {
                   <li key={item}>
                     <Link
                       href="/"
-                      className="
-                      text-slate-400
-                      hover:text-white
-                      transition-colors
-                      "
+                      className="text-slate-400 hover:text-white transition-colors"
                     >
                       {item}
                     </Link>
@@ -171,11 +131,7 @@ export function Footer() {
                   <li key={item}>
                     <Link
                       href="/"
-                      className="
-                      text-slate-400
-                      hover:text-white
-                      transition-colors
-                      "
+                      className="text-slate-400 hover:text-white transition-colors"
                     >
                       {item}
                     </Link>
@@ -194,11 +150,7 @@ export function Footer() {
             </h4>
 
             <p
-              className="
-              text-slate-400
-              text-sm
-              mb-4
-              "
+              className="text-slate-400 text-sm mb-4"
             >
               Get luxury property updates.
             </p>
@@ -206,13 +158,7 @@ export function Footer() {
             <input
               type="email"
               placeholder="Email address"
-              className="
-              w-full
-              glass-card
-              px-4
-              py-3
-              outline-none
-              "
+              className="w-full glass-card px-4 py-3 outline-none"
             />
 
           </div>
@@ -222,17 +168,7 @@ export function Footer() {
         {/* Bottom */}
 
         <div
-          className="
-          border-t
-          border-white/10
-          py-6
-          flex
-          flex-col
-          md:flex-row
-          gap-4
-          items-center
-          justify-between
-          "
+          className="border-t border-white/10 py-6 flex flex-col md:flex-row gap-4 items-center justify-between"
         >
           <p className="text-slate-500">
             © 2026 Prime Estate.
@@ -240,12 +176,7 @@ export function Footer() {
           </p>
 
           <div
-            className="
-            flex
-            gap-6
-            text-sm
-            text-slate-500
-            "
+            className="flex gap-6 text-sm text-slate-500"
           >
             <Link href="/">
               Privacy

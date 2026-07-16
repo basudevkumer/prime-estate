@@ -49,34 +49,20 @@ export function PropertyFeatures({ property }: PropertyFeaturesProps) {
   return (
     <>
       <section
-        className="
-      mt-20
-      grid
-      lg:grid-cols-3
-      gap-10
-      "
+        className="mt-20 grid lg:grid-cols-3 gap-10"
       >
         {/* LEFT */}
         <div
-          className="
-        lg:col-span-2
-        "
+          className="lg:col-span-2"
         >
           <h2
-            className="
-          text-3xl
-          font-bold
-          "
+            className="text-3xl font-bold"
           >
             Overview
           </h2>
 
           <p
-            className="
-          mt-6
-          text-slate-400
-          leading-relaxed
-          "
+            className="mt-6 text-slate-400 leading-relaxed"
           >
             {property.description ??
               `
@@ -93,25 +79,16 @@ prestige, and long-term value.
 
         {/* RIGHT */}
         <div
-          className="
-        glass-card
-        p-8
-        "
+          className="glass-card p-8"
         >
           <h3
-            className="
-          text-xl
-          font-semibold
-          "
+            className="text-xl font-semibold"
           >
             Quick Facts
           </h3>
 
           <div
-            className="
-          mt-6
-          space-y-4
-          "
+            className="mt-6 space-y-4"
           >
             <div className="flex justify-between">
               <span className="text-slate-400">Property Type</span>
@@ -141,49 +118,24 @@ prestige, and long-term value.
       </section>
 
       <section
-        className="
-  mt-20
-  "
+        className="mt-20"
       >
         <h2
-          className="
-    text-3xl
-    font-bold
-    "
+          className="text-3xl font-bold"
         >
           Amenities
         </h2>
 
         <div
-          className="
-    mt-8
-    grid
-    md:grid-cols-2
-    xl:grid-cols-3
-    gap-6
-    "
+          className="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6"
         >
           {amenities.map(({ icon: Icon, title }) => (
             <div
               key={title}
-              className="
-          glass-card
-          p-6
-          flex
-          items-center
-          gap-4
-          "
+              className="glass-card p-6 flex items-center gap-4"
             >
               <div
-                className="
-            h-12
-            w-12
-            rounded-2xl
-            bg-primary-500/10
-            flex
-            items-center
-            justify-center
-            "
+                className="h-12 w-12 rounded-2xl bg-primary-500/10 flex items-center justify-center"
               >
                 <Icon size={22} />
               </div>

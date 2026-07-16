@@ -45,12 +45,7 @@ export default async function PropertyDetailsPage({
 
       <PropertyHeader property={property} />
       <div
-        className="
-  mt-20
-  grid
-  lg:grid-cols-3
-  gap-10
-  "
+        className="mt-20 grid lg:grid-cols-3 gap-10"
       >
         <div className="lg:col-span-2">
           <PropertyFeatures property={property} />

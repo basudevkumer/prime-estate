@@ -8,7 +8,7 @@ import { PiBathtub } from "react-icons/pi";
 import { TbRulerMeasure } from "react-icons/tb";
 
 import { Property } from "@/types";
-import { formatPrice } from "@/utils";
+import { cn, formatPrice } from "@/utils";
 import { useWishlistStore } from "@/store/wishlist-store";
 
 import { Card } from "./card";
@@ -31,15 +31,15 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
     return (
       <Link href={`/properties/${property.id}`}>
         <Card
-          className="
-  overflow-hidden
-  group
-  cursor-pointer
-  transition-all
-  duration-500
-  hover:-translate-y-2
-  hover:shadow-2xl
-  "
+          className={cn(
+            "overflow-hidden",
+            "group",
+            "cursor-pointer",
+            "transition-all",
+            "duration-500",
+            "hover:-translate-y-2",
+            "hover:shadow-2xl",
+          )}
         >
           {/* IMAGE */}
           <div className="relative h-72">
@@ -47,33 +47,33 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
               src={property.image}
               alt={property.title}
               fill
-              className="
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-110
-            "
+              className={cn(
+                "object-cover",
+                "transition-transform",
+                "duration-700",
+                "group-hover:scale-110",
+              )}
             />
 
             {/* FAVORITE */}
             <button
               onClick={() => toggleWishlist(property)}
-              className="
-    absolute top-4 right-4
-    h-11 w-11
-    rounded-full
-    bg-black/30
-    backdrop-blur-md
-    flex items-center justify-center
-    transition
-  "
+              className={cn(
+                "absolute top-4 right-4",
+                "h-11 w-11",
+                "rounded-full",
+                "bg-black/30",
+                "backdrop-blur-md",
+                "flex items-center justify-center",
+                "transition",
+              )}
             >
               <RiHeartLine
-                className={`
-    transition-all
-    duration-300
-    ${liked ? "text-red-500 scale-110" : ""}
-  `}
+                className={cn(
+                  "transition-all",
+                  "duration-300",
+                  liked ? "text-red-500 scale-110" : "",
+                )}
               />
             </button>
 
@@ -126,14 +126,14 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
   return (
     <Link href={`/properties/${property.id}`}>
       <Card
-        className="
-  overflow-hidden
-  group
-  flex
-  transition-all
-  duration-500
-  hover:-translate-y-1
-  "
+        className={cn(
+          "overflow-hidden",
+          "group",
+          "flex",
+          "transition-all",
+          "duration-500",
+          "hover:-translate-y-1",
+        )}
       >
         {/* IMAGE */}
         <div className="relative w-72 h-56 flex-shrink-0">
@@ -141,35 +141,35 @@ export function PropertyCard({ property, view = "grid" }: PropertyCardProps) {
             src={property.image}
             alt={property.title}
             fill
-            className="
-            object-cover
-            transition-transform
-            duration-700
-            group-hover:scale-105
-          "
+            className={cn(
+              "object-cover",
+              "transition-transform",
+              "duration-700",
+              "group-hover:scale-105",
+            )}
           />
 
           {/* FAVORITE */}
           <button
             onClick={() => toggleWishlist(property)}
-            className="
-absolute top-4 right-4
-h-11 w-11
-rounded-full
-bg-black/30
-backdrop-blur-md
-flex items-center justify-center
-transition-all
-duration-300
-hover:scale-110
-"
+            className={cn(
+              "absolute top-4 right-4",
+              "h-11 w-11",
+              "rounded-full",
+              "bg-black/30",
+              "backdrop-blur-md",
+              "flex items-center justify-center",
+              "transition-all",
+              "duration-300",
+              "hover:scale-110",
+            )}
           >
             <RiHeartLine
-              className={`
-    transition-all
-    duration-300
-    ${liked ? "text-red-500 scale-110" : ""}
-  `}
+              className={cn(
+                "transition-all",
+                "duration-300",
+                liked ? "text-red-500 scale-110" : "",
+              )}
             />
           </button>
         </div>

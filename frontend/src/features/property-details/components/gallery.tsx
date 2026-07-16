@@ -18,31 +18,20 @@ export function Gallery({
       
       {/* Main Image */}
       <div
-        className="
-        relative
-        h-[500px]
-        rounded-[32px]
-        overflow-hidden
-        "
+        className="relative h-[500px] rounded-[32px] overflow-hidden"
       >
         <Image
           src={activeImage}
           alt="Property"
           fill
           priority
-          className="
-          object-cover
-          "
+          className="object-cover"
         />
       </div>
 
       {/* Thumbnails */}
       <div
-        className="
-        grid
-        grid-cols-4
-        gap-4
-        "
+        className="grid grid-cols-4 gap-4"
       >
         {images.map((image) => (
           <button
@@ -50,14 +39,7 @@ export function Gallery({
             onClick={() =>
               setActiveImage(image)
             }
-            className="
-            relative
-            h-28
-            rounded-2xl
-            overflow-hidden
-            border
-            border-white/10
-            "
+            className="relative h-28 rounded-2xl overflow-hidden border border-white/10"
           >
             <Image
               src={image}

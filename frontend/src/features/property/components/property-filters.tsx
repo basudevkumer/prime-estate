@@ -10,6 +10,7 @@ import {
 import { usePropertyFilterStore } from "@/store";
 
 import { Button } from "@/components/ui";
+import { cn } from "@/utils";
 
 export function PropertyFilters() {
   const {
@@ -29,37 +30,13 @@ export function PropertyFilters() {
   } = usePropertyFilterStore();
 
   return (
-    <aside
-      className="
-      glass-card
-      p-6
-      sticky
-      top-28
-      "
-    >
-      <div
-        className="
-        flex
-        items-center
-        justify-between
-        mb-6
-        "
-      >
-        <h3
-          className="
-          text-lg
-          font-semibold
-          "
-        >
-          Filters
-        </h3>
+    <aside className={cn("glass-card", "p-6", "sticky", "top-28")}>
+      <div className={cn("flex", "items-center", "justify-between", "mb-6")}>
+        <h3 className={cn("text-lg", "font-semibold")}>Filters</h3>
 
         <button
           onClick={clearFilters}
-          className="
-          text-sm
-          text-blue-400
-          "
+          className={cn("text-sm", "text-blue-400")}
         >
           Clear
         </button>
@@ -69,14 +46,7 @@ export function PropertyFilters() {
         {/* Location */}
 
         <div>
-          <label
-            className="
-            block
-            mb-2
-            text-sm
-            text-slate-400
-            "
-          >
+          <label className={cn("block", "mb-2", "text-sm", "text-slate-400")}>
             Location
           </label>
 
@@ -84,45 +54,38 @@ export function PropertyFilters() {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             placeholder="Miami"
-            className="
-            w-full
-            h-12
-            px-4
-            rounded-2xl
-            bg-white/5
-            border
-            border-white/10
-            outline-none
-            "
+            className={cn(
+              "w-full",
+              "h-12",
+              "px-4",
+              "rounded-2xl",
+              "bg-white/5",
+              "border",
+              "border-white/10",
+              "outline-none",
+            )}
           />
         </div>
 
         {/* Property Type */}
 
         <div>
-          <label
-            className="
-            block
-            mb-2
-            text-sm
-            text-slate-400
-            "
-          >
+          <label className={cn("block", "mb-2", "text-sm", "text-slate-400")}>
             Property Type
           </label>
 
           <select
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
-            className="
-            w-full
-            h-12
-            px-4
-            rounded-2xl
-            bg-white/5
-            border
-            border-white/10
-            "
+            className={cn(
+              "w-full",
+              "h-12",
+              "px-4",
+              "rounded-2xl",
+              "bg-white/5",
+              "border",
+              "border-white/10",
+            )}
           >
             {PROPERTY_TYPES.map((item) => (
               <option key={item}>{item}</option>
@@ -133,29 +96,22 @@ export function PropertyFilters() {
         {/* Price */}
 
         <div>
-          <label
-            className="
-            block
-            mb-2
-            text-sm
-            text-slate-400
-            "
-          >
+          <label className={cn("block", "mb-2", "text-sm", "text-slate-400")}>
             Budget
           </label>
 
           <select
             value={priceRange}
             onChange={(e) => setPriceRange(e.target.value)}
-            className="
-            w-full
-            h-12
-            px-4
-            rounded-2xl
-            bg-white/5
-            border
-            border-white/10
-            "
+            className={cn(
+              "w-full",
+              "h-12",
+              "px-4",
+              "rounded-2xl",
+              "bg-white/5",
+              "border",
+              "border-white/10",
+            )}
           >
             {PRICE_RANGES.map((item) => (
               <option key={item}>{item}</option>
@@ -166,29 +122,22 @@ export function PropertyFilters() {
         {/* Bedrooms */}
 
         <div>
-          <label
-            className="
-            block
-            mb-2
-            text-sm
-            text-slate-400
-            "
-          >
+          <label className={cn("block", "mb-2", "text-sm", "text-slate-400")}>
             Bedrooms
           </label>
 
           <select
             value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
-            className="
-            w-full
-            h-12
-            px-4
-            rounded-2xl
-            bg-white/5
-            border
-            border-white/10
-            "
+            className={cn(
+              "w-full",
+              "h-12",
+              "px-4",
+              "rounded-2xl",
+              "bg-white/5",
+              "border",
+              "border-white/10",
+            )}
           >
             {BEDROOM_OPTIONS.map((item) => (
               <option key={item}>{item}</option>
@@ -199,29 +148,22 @@ export function PropertyFilters() {
         {/* Bathrooms */}
 
         <div>
-          <label
-            className="
-            block
-            mb-2
-            text-sm
-            text-slate-400
-            "
-          >
+          <label className={cn("block", "mb-2", "text-sm", "text-slate-400")}>
             Bathrooms
           </label>
 
           <select
             value={bathrooms}
             onChange={(e) => setBathrooms(e.target.value)}
-            className="
-            w-full
-            h-12
-            px-4
-            rounded-2xl
-            bg-white/5
-            border
-            border-white/10
-            "
+            className={cn(
+              "w-full",
+              "h-12",
+              "px-4",
+              "rounded-2xl",
+              "bg-white/5",
+              "border",
+              "border-white/10",
+            )}
           >
             {BATHROOM_OPTIONS.map((item) => (
               <option key={item}>{item}</option>

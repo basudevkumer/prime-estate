@@ -3,22 +3,12 @@ import { propertyCategories } from "@/data";
 export function PropertyCategories() {
   return (
     <section
-      className="
-      section-padding
-      relative
-      overflow-hidden
-      "
+      className="section-padding relative overflow-hidden"
     >
       {/* Background Glow */}
 
       <div
-        className="
-        absolute
-        inset-0
-        bg-cyan-500/5
-        blur-[140px]
-        pointer-events-none
-        "
+        className="absolute inset-0 bg-cyan-500/5 blur-[140px] pointer-events-none"
       />
 
       <div className="container-premium relative z-10">
@@ -48,16 +38,7 @@ export function PropertyCategories() {
           {propertyCategories.map((cat) => (
             <div
               key={cat.id}
-              className="
-              glass-card
-              p-6
-              text-center
-              hover:-translate-y-2
-              transition-all
-              duration-300
-              cursor-pointer
-              group
-              "
+              className="glass-card p-6 text-center hover:-translate-y-2 transition-all duration-300 cursor-pointer group"
             >
 
               {/* Icon */}

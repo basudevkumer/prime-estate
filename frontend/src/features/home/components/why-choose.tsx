@@ -35,26 +35,12 @@ const features = [
 export function WhyChoose() {
   return (
     <section
-      className="
-      section-padding
-      relative
-      overflow-hidden
-      "
+      className="section-padding relative overflow-hidden"
     >
       {/* Background Glow */}
 
       <div
-        className="
-        absolute
-        top-0
-        left-1/2
-        -translate-x-1/2
-        w-[600px]
-        h-[600px]
-        bg-purple-500/10
-        blur-[160px]
-        rounded-full
-        "
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[160px] rounded-full"
       />
 
       <div className="container-premium relative z-10">

@@ -21,25 +21,10 @@ export function ScheduleVisitModal() {
 
       {open && (
         <div
-          className="
-          fixed
-          inset-0
-          bg-black/60
-          backdrop-blur-sm
-          flex
-          items-center
-          justify-center
-          z-50
-          "
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50"
         >
           <div
-            className="
-            glass-card
-            w-full
-            max-w-xl
-            rounded-[32px]
-            p-8
-            "
+            className="glass-card w-full max-w-xl rounded-[32px] p-8"
           >
             <h2 className="text-3xl font-bold">
               Schedule Visit

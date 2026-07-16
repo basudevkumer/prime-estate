@@ -42,18 +42,18 @@ export function PropertyToolbar() {
         <div className="flex gap-2">
           <button
             onClick={() => setView("grid")}
-            className={`p-2 rounded-lg ${
-              view === "grid" ? "bg-blue-500/20" : ""
-            }`}
+            className={
+              "p-2 rounded-lg " + (view === "grid" ? "bg-blue-500/20" : "")
+            }
           >
             <RiGridFill />
           </button>
 
           <button
             onClick={() => setView("list")}
-            className={`p-2 rounded-lg ${
-              view === "list" ? "bg-blue-500/20" : ""
-            }`}
+            className={
+              "p-2 rounded-lg " + (view === "list" ? "bg-blue-500/20" : "")
+            }
           >
             <RiListCheck />
           </button>

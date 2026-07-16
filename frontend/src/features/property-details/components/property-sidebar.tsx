@@ -4,10 +4,7 @@ import { InquiryForm } from "./inquiry-form";
 export function PropertySidebar() {
   return (
     <aside
-      className="
-      lg:sticky
-      lg:top-28
-      "
+      className="lg:sticky lg:top-28"
     >
       <AgentCard />
 

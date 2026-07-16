@@ -16,13 +16,7 @@ export function RelatedProperties({
       </h2>
 
       <div
-        className="
-        mt-10
-        grid
-        md:grid-cols-2
-        xl:grid-cols-3
-        gap-8
-        "
+        className="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-8"
       >
         {properties.map((property) => (
           <PropertyCard

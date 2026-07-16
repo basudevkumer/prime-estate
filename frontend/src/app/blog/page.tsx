@@ -1,5 +1,6 @@
 import { blogs } from "@/data/blogs";
 import { BlogCard } from "./blog-card";
+// import { BlogCard } from "./blog-card";
 
 export default function BlogPage() {
   return (

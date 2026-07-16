@@ -14,22 +14,12 @@ import {
 export function Testimonials() {
   return (
     <section
-      className="
-      section-padding
-      relative
-      overflow-hidden
-      "
+      className="section-padding relative overflow-hidden"
     >
       {/* Background Glow */}
 
       <div
-        className="
-        absolute
-        inset-0
-        bg-violet-500/5
-        blur-[160px]
-        pointer-events-none
-        "
+        className="absolute inset-0 bg-violet-500/5 blur-[160px] pointer-events-none"
       />
 
       <div className="container-premium relative z-10">
@@ -71,12 +61,7 @@ export function Testimonials() {
             <SwiperSlide key={t.id}>
 
               <div
-                className="
-                glass-card
-                p-8
-                rounded-[32px]
-                h-full
-                "
+                className="glass-card p-8 rounded-[32px] h-full"
               >
 
                 {/* Stars */}

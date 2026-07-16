@@ -9,35 +9,22 @@ import {
 export function FeaturedProperties() {
   return (
     <section
-      className="
-      section-padding
-      "
+      className="section-padding"
     >
       <div className="container-premium">
 
         <div
-          className="
-          flex
-          items-end
-          justify-between
-          mb-12
-          "
+          className="flex items-end justify-between mb-12"
         >
           <div>
             <p
-              className="
-              text-blue-400
-              mb-3
-              "
+              className="text-blue-400 mb-3"
             >
               Featured Listings
             </p>
 
             <h2
-              className="
-              heading-2
-              font-heading
-              "
+              className="heading-2 font-heading"
             >
               Exceptional
               Properties
@@ -46,12 +33,7 @@ export function FeaturedProperties() {
         </div>
 
         <div
-          className="
-          grid
-          md:grid-cols-2
-          xl:grid-cols-3
-          gap-8
-          "
+          className="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
         >
           {properties.map(
             (property) => (

@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <header className="sticky   top-0   z-50   backdrop-blur-xl    border-b    border-white/10   bg-[#080B14]/80    ">
-      <div className="      container-premium     h-20      flex   items-cente      justify-between    ">
+      <div className="      container-premium     h-20      flex   items-center      justify-between    ">
         <Logo />
 
         {/* Desktop */}

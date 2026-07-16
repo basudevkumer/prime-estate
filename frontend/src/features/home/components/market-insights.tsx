@@ -7,25 +7,12 @@ import {
 export function MarketInsights() {
   return (
     <section
-      className="
-      section-padding
-      relative
-      overflow-hidden
-      "
+      className="section-padding relative overflow-hidden"
     >
       {/* Background Glow */}
 
       <div
-        className="
-        absolute
-        top-0
-        right-0
-        w-[500px]
-        h-[500px]
-        bg-cyan-500/10
-        blur-[180px]
-        rounded-full
-        "
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[180px] rounded-full"
       />
 
       <div className="container-premium relative z-10">
@@ -51,22 +38,13 @@ export function MarketInsights() {
         {/* Dashboard Layout */}
 
         <div
-          className="
-          grid
-          lg:grid-cols-12
-          gap-8
-          "
+          className="grid lg:grid-cols-12 gap-8"
         >
 
           {/* Left Analytics */}
 
           <div
-            className="
-            lg:col-span-8
-            glass-card
-            p-8
-            rounded-[32px]
-            "
+            className="lg:col-span-8 glass-card p-8 rounded-[32px]"
           >
 
             <div className="flex items-center justify-between">
@@ -82,12 +60,7 @@ export function MarketInsights() {
               </div>
 
               <div
-                className="
-                flex
-                items-center
-                gap-2
-                text-green-400
-                "
+                className="flex items-center gap-2 text-green-400"
               >
                 <RiArrowUpLine />
 
@@ -99,27 +72,14 @@ export function MarketInsights() {
             {/* Fake Chart */}
 
             <div
-              className="
-              mt-10
-              h-[250px]
-              flex
-              items-end
-              gap-3
-              "
+              className="mt-10 h-[250px] flex items-end gap-3"
             >
 
               {[40, 55, 48, 70, 65, 90, 85, 110].map(
                 (height, index) => (
                   <div
                     key={index}
-                    className="
-                    flex-1
-                    rounded-t-full
-                    bg-gradient-to-t
-                    from-blue-500
-                    via-cyan-500
-                    to-violet-500
-                    "
+                    className="flex-1 rounded-t-full bg-gradient-to-t from-blue-500 via-cyan-500 to-violet-500"
                     style={{
                       height: `${height}%`,
                     }}
@@ -134,20 +94,13 @@ export function MarketInsights() {
           {/* Right Metrics */}
 
           <div
-            className="
-            lg:col-span-4
-            space-y-4
-            "
+            className="lg:col-span-4 space-y-4"
           >
 
             {marketInsights.map((item) => (
               <div
                 key={item.id}
-                className="
-                glass-card
-                p-6
-                rounded-[28px]
-                "
+                className="glass-card p-6 rounded-[28px]"
               >
 
                 <p className="text-slate-400 text-sm">
@@ -155,12 +108,7 @@ export function MarketInsights() {
                 </p>
 
                 <h3
-                  className="
-                  text-gradient
-                  text-3xl
-                  font-bold
-                  mt-2
-                  "
+                  className="text-gradient text-3xl font-bold mt-2"
                 >
                   {item.value}
                 </h3>

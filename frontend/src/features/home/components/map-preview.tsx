@@ -10,22 +10,12 @@ import {
 export function MapPreview() {
   return (
     <section
-      className="
-      section-padding
-      relative
-      overflow-hidden
-      "
+      className="section-padding relative overflow-hidden"
     >
       {/* Glow Background */}
 
       <div
-        className="
-        absolute
-        inset-0
-        bg-blue-500/5
-        blur-[160px]
-        pointer-events-none
-        "
+        className="absolute inset-0 bg-blue-500/5 blur-[160px] pointer-events-none"
       />
 
       <div className="container-premium relative z-10">
@@ -86,14 +76,7 @@ export function MapPreview() {
           {/* Floating Info Card */}
 
           <div
-            className="
-            absolute
-            bottom-6
-            left-6
-            glass-card
-            p-5
-            max-w-xs
-            "
+            className="absolute bottom-6 left-6 glass-card p-5 max-w-xs"
           >
             <p className="text-slate-400 text-sm">
               Featured Region

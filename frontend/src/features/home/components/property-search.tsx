@@ -10,64 +10,32 @@ import {
 export function PropertySearch() {
   return (
     <section
-      className="
-      relative
-      -mt-16
-      z-20
-      "
+      className="relative -mt-16 z-20"
     >
       <div className="container-premium">
         <div
-          className="
-          glass-card
-          gradient-border
-          p-6
-          lg:p-8
-          "
+          className="glass-card gradient-border p-6 lg:p-8"
         >
           <div
-            className="
-            grid
-            lg:grid-cols-4
-            gap-5
-            "
+            className="grid lg:grid-cols-4 gap-5"
           >
             {/* Location */}
 
             <div>
               <label
-                className="
-                text-sm
-                text-slate-400
-                mb-2
-                block
-                "
+                className="text-sm text-slate-400 mb-2 block"
               >
                 Location
               </label>
 
               <div
-                className="
-                flex
-                items-center
-                gap-3
-                rounded-2xl
-                border
-                border-white/10
-                bg-white/5
-                px-4
-                h-14
-                "
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 h-14"
               >
                 <RiMapPinLine />
 
                 <input
                   placeholder="New York"
-                  className="
-                  bg-transparent
-                  outline-none
-                  w-full
-                  "
+                  className="bg-transparent outline-none w-full"
                 />
               </div>
             </div>
@@ -76,37 +44,18 @@ export function PropertySearch() {
 
             <div>
               <label
-                className="
-                text-sm
-                text-slate-400
-                mb-2
-                block
-                "
+                className="text-sm text-slate-400 mb-2 block"
               >
                 Property Type
               </label>
 
               <div
-                className="
-                flex
-                items-center
-                gap-3
-                rounded-2xl
-                border
-                border-white/10
-                bg-white/5
-                px-4
-                h-14
-                "
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 h-14"
               >
                 <RiHome4Line />
 
                 <select
-                  className="
-                  bg-transparent
-                  outline-none
-                  w-full
-                  "
+                  className="bg-transparent outline-none w-full"
                 >
                   <option>Villa</option>
 
@@ -121,37 +70,18 @@ export function PropertySearch() {
 
             <div>
               <label
-                className="
-                text-sm
-                text-slate-400
-                mb-2
-                block
-                "
+                className="text-sm text-slate-400 mb-2 block"
               >
                 Budget
               </label>
 
               <div
-                className="
-                flex
-                items-center
-                gap-3
-                rounded-2xl
-                border
-                border-white/10
-                bg-white/5
-                px-4
-                h-14
-                "
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 h-14"
               >
                 <RiMoneyDollarCircleLine />
 
                 <select
-                  className="
-                  bg-transparent
-                  outline-none
-                  w-full
-                  "
+                  className="bg-transparent outline-none w-full"
                 >
                   <option>$500K+</option>
 
@@ -165,10 +95,7 @@ export function PropertySearch() {
             {/* Button */}
 
             <div
-              className="
-              flex
-              items-end
-              "
+              className="flex items-end"
             >
               <Button variant="gradient" fullWidth>
                 <RiSearchLine />

@@ -5,12 +5,7 @@ import { ScheduleVisitModal } from "./schedule-visit-modal";
 export function InquiryForm() {
   return (
     <div
-      className="
-      glass-card
-      rounded-[32px]
-      p-8
-      mt-8
-      "
+      className="glass-card rounded-[32px] p-8 mt-8"
     >
       <h3 className="text-2xl font-semibold">
         Interested?

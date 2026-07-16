@@ -13,11 +13,7 @@ export default function PropertiesPage() {
       <section className="section-padding">
         <div className="container-premium">
           <div
-            className="
-            grid
-            lg:grid-cols-12
-            gap-8
-            "
+            className="grid lg:grid-cols-12 gap-8"
           >
             {/* Sidebar */}
 
