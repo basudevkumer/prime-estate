@@ -1,5 +1,5 @@
 import { agents } from "@/data/agents";
-import { AgentCard } from "./agent-card";
+import { AgentCard } from "./AgentCard";
 
 export default function AgentsPage() {
   return (

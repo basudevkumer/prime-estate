@@ -1,7 +1,7 @@
 "use client";
 
 import { useWishlistStore } from "@/store/wishlist-store";
-import { PropertyCard } from "@/components/ui/property-card";
+import { PropertyCard } from "@/components/ui/PropertyCard";
 
 export default function SavedPage() {
   const { items } = useWishlistStore();

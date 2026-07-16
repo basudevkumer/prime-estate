@@ -1,5 +1,5 @@
-import { StatsCard } from "@/components/ui/stats-card";
-import { Accordion } from "@/components/ui/accordion";
+import { StatsCard } from "@/components/ui/StatsCard";
+import { Accordion } from "@/components/ui/Accordion";
 import { faqs } from "@/data/faqs";
 import { partners } from "@/data/partners";
 import { testimonials } from "@/data/testimonials";

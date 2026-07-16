@@ -1,7 +1,7 @@
-export * from "./navbar";
+export * from "./Navbar";
 
-export * from "./mobile-menu";
+export * from "./MobileMenu";
 
-export * from "./logo";
+export * from "./Logo";
 
-export * from "./footer";
+export * from "./Footer";

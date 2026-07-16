@@ -10,9 +10,9 @@ import { NAVIGATION_LINKS } from "@/constants";
 
 import { Button } from "@/components/ui";
 
-import { Logo } from "./logo";
+import { Logo } from "./Logo";
 
-import { MobileMenu } from "./mobile-menu";
+import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);

@@ -11,7 +11,7 @@ import { Property } from "@/types";
 import { cn, formatPrice } from "@/utils";
 import { useWishlistStore } from "@/store/wishlist-store";
 
-import { Card } from "./card";
+import { Card } from "./Card";
 import Link from "next/link";
 
 interface PropertyCardProps {

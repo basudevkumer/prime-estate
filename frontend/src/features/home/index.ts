@@ -1,21 +1,21 @@
-export * from "./components/hero-section";
+export * from "./components/HeroSection";
 
-export * from "./components/property-search";
+export * from "./components/PropertySearch";
 
-export * from "./components/trusted-partners";
+export * from "./components/TrustedPartners";
 
-export * from "./components/featured-properties";
+export * from "./components/FeaturedProperties";
 
-export * from "./components/why-choose";
+export * from "./components/WhyChoose";
 
-export * from "./components/property-categories";
+export * from "./components/PropertyCategories";
 
-export * from "./components/map-preview";
+export * from "./components/MapPreview";
 
-export * from "./components/testimonials";
+export * from "./components/Testimonials";
 
-export * from "./components/market-insights";
+export * from "./components/MarketInsights";
 
-export * from "./components/faq-section";
+export * from "./components/FAQSection";
 
-export * from "./components/cta-section";
+export * from "./components/CTASection";

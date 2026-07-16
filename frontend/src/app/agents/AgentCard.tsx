@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { RiStarFill, RiMailLine, RiPhoneLine } from "react-icons/ri";
 import { Agent } from "@/types";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/Card";
 
 interface AgentCardProps {
   agent: Agent;

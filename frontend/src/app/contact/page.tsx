@@ -8,10 +8,10 @@ import {
   RiTimeLine,
   RiSendPlaneLine,
 } from "react-icons/ri";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { FormField } from "@/components/ui/form-field";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { FormField } from "@/components/ui/FormField";
 import toast from "react-hot-toast";
 
 export default function ContactPage() {

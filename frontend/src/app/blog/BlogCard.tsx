@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiCalendarLine, RiUserLine, RiArrowRightLine } from "react-icons/ri";
 import { Blog } from "@/types";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/Card";
 
 interface BlogCardProps {
   blog: Blog;
