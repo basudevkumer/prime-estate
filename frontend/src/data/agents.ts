@@ -3,41 +3,112 @@ import { Agent } from "@/types";
 export const agents: Agent[] = [
   {
     id: "1",
-
     name: "Sophia Anderson",
-
     role: "Senior Property Advisor",
-
     image: "/agents/agent-1.jpg",
-
-    email: "sophia@example.com",
-
+    email: "sophia.anderson@primeestate.com",
     phone: "+1 202 555 0123",
-
     rating: 4.9,
-
     soldProperties: 128,
-
-    bio: "Luxury property specialist with over 10 years experience.",
+    bio: "Luxury property specialist with over 10 years of experience in high-end residential and commercial real estate across prime locations.",
   },
-
   {
     id: "2",
-
     name: "Michael Carter",
-
     role: "Luxury Estate Consultant",
-
     image: "/agents/agent-2.jpg",
-
-    email: "michael@example.com",
-
+    email: "michael.carter@primeestate.com",
     phone: "+1 202 555 0144",
-
     rating: 4.8,
-
     soldProperties: 95,
-
-    bio: "Helping clients discover premium real estate opportunities.",
+    bio: "Helping clients discover premium real estate opportunities with a focus on waterfront properties and exclusive developments.",
   },
-];  
+  {
+    id: "3",
+    name: "James Mitchell",
+    role: "Commercial Real Estate Broker",
+    image: "/agents/agent-3.jpg",
+    email: "james.mitchell@primeestate.com",
+    phone: "+1 202 555 0155",
+    rating: 4.9,
+    soldProperties: 112,
+    bio: "Expert in commercial property investments with a track record of securing high-value deals for corporate clients and investors.",
+  },
+  {
+    id: "4",
+    name: "Emily Roberts",
+    role: "Residential Sales Specialist",
+    image: "/agents/agent-4.jpg",
+    email: "emily.roberts@primeestate.com",
+    phone: "+1 202 555 0166",
+    rating: 4.7,
+    soldProperties: 84,
+    bio: "Passionate about helping families find their dream homes. Specializes in residential properties and first-time homebuyers.",
+  },
+  {
+    id: "5",
+    name: "Daniel Kim",
+    role: "International Property Consultant",
+    image: "/agents/agent-5.jpg",
+    email: "daniel.kim@primeestate.com",
+    phone: "+1 202 555 0177",
+    rating: 4.8,
+    soldProperties: 76,
+    bio: "Specializing in international real estate markets, helping clients invest in properties across Dubai, London, and Singapore.",
+  },
+  {
+    id: "6",
+    name: "Sarah Williams",
+    role: "Property Investment Advisor",
+    image: "/agents/agent-6.jpg",
+    email: "sarah.williams@primeestate.com",
+    phone: "+1 202 555 0188",
+    rating: 4.6,
+    soldProperties: 63,
+    bio: "Dedicated to providing strategic property investment advice and portfolio management for high-net-worth individuals.",
+  },
+  {
+    id: "7",
+    name: "Olivia Martinez",
+    role: "Luxury Home Specialist",
+    image: "/agents/agent-7.jpg",
+    email: "olivia.martinez@primeestate.com",
+    phone: "+1 202 555 0199",
+    rating: 4.9,
+    soldProperties: 147,
+    bio: "Top-performing agent specializing in luxury estates and penthouses. Known for exceptional client service and market expertise.",
+  },
+  {
+    id: "8",
+    name: "Ryan Thompson",
+    role: "Real Estate Developer Consultant",
+    image: "/agents/agent-8.jpg",
+    email: "ryan.thompson@primeestate.com",
+    phone: "+1 202 555 0200",
+    rating: 4.7,
+    soldProperties: 91,
+    bio: "Bridging the gap between developers and buyers. Expert in off-plan projects and new development sales.",
+  },
+  {
+    id: "9",
+    name: "Amanda Foster",
+    role: "Property Management Director",
+    image: "/agents/agent-9.jpg",
+    email: "amanda.foster@primeestate.com",
+    phone: "+1 202 555 0211",
+    rating: 4.5,
+    soldProperties: 58,
+    bio: "Managing a portfolio of premium rental properties with a focus on maximizing returns for property owners.",
+  },
+  {
+    id: "10",
+    name: "Christopher Lee",
+    role: "Senior Real Estate Agent",
+    image: "/agents/agent-10.jpg",
+    email: "christopher.lee@primeestate.com",
+    phone: "+1 202 555 0222",
+    rating: 4.8,
+    soldProperties: 103,
+    bio: "Award-winning agent with deep knowledge of suburban and urban markets. Committed to finding the perfect match for every client.",
+  },
+];
