@@ -1,10 +1,9 @@
-import Image from "next/image";
 import { StatsCard } from "@/components/ui/StatsCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { faqs } from "@/data/faqs";
 import { partners } from "@/data/partners";
 import { testimonials } from "@/data/testimonials";
-import { RiStarFill, RiStarHalfFill, RiDoubleQuotesL } from "react-icons/ri";
+import { TestimonialsSlider } from "@/components/shared/TestimonialsSlider";
 
 export default function AboutPage() {
   return (
@@ -95,7 +94,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials Slider */}
       <section className="section-padding pt-0">
         <div className="container-premium">
           <div className="text-center mb-12">
@@ -106,35 +105,7 @@ export default function AboutPage() {
               What Our Clients Say
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.slice(0, 3).map((t) => (
-              <div key={t.id} className="glass-card p-6 rounded-[32px]">
-                <RiDoubleQuotesL className="text-blue-400 text-2xl mb-4" />
-                <p className="text-slate-300 leading-relaxed">
-                  &ldquo;{t.review}&rdquo;
-                </p>
-                <div className="mt-4 flex items-center gap-1 text-yellow-400">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <RiStarFill key={i} size={16} />
-                  ))}
-                </div>
-                <div className="mt-3 flex items-center gap-3">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden ring-2 ring-blue-500/30">
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-semibold">{t.name}</p>
-                    <p className="text-sm text-slate-500">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsSlider testimonials={testimonials} />
         </div>
       </section>
 
