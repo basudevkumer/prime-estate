@@ -33,7 +33,11 @@ const buttonVariants = cva(
 
         ghost: "text-white hover:bg-white/5",
 
-        gradient:"bg-gradient-to-r from-blue-500 via-cyan-500 to-violet-500 text-white shadow-[0_0_30px_rgba(59,130,246,.3)] hover:scale-[1.02]",
+        outline:
+          "border border-white/20 text-white hover:bg-white/5 hover:border-white/40",
+
+        gradient:
+          "bg-gradient-to-r from-blue-500 via-cyan-500 to-violet-500 text-white shadow-[0_0_30px_rgba(59,130,246,.3)] hover:scale-[1.02]",
       },
 
       size: {
@@ -58,7 +62,7 @@ const buttonVariants = cva(
 );
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "ghost" | "gradient";
+  variant?: "primary" | "secondary" | "ghost" | "outline" | "gradient";
 
   size?: "sm" | "md" | "lg";
 
