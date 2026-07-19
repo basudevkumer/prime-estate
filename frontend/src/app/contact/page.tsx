@@ -1,6 +1,9 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import {
   RiMapPinLine,
   RiMailLine,
@@ -14,24 +17,47 @@ import { Textarea } from "@/components/ui/Textarea";
 import { FormField } from "@/components/ui/FormField";
 import toast from "react-hot-toast";
 
+const contactSchema = z.object({
+  name: z
+    .string()
+    .min(2, "Name must be at least 2 characters")
+    .max(50, "Name is too long"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z
+    .string()
+    .optional()
+    .refine(
+      (val) => !val || /^[\d\s\-\+\(\)]{7,20}$/.test(val),
+      "Please enter a valid phone number",
+    ),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .max(1000, "Message is too long"),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: ContactFormData) => {
     setLoading(true);
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast.success("Message sent successfully! We'll get back to you soon.");
-    setForm({ name: "", email: "", phone: "", message: "" });
+    reset();
     setLoading(false);
   };
 
@@ -98,9 +124,19 @@ export default function ContactPage() {
                 </div>
               ))}
 
-              {/* Map Placeholder */}
-              <div className="glass-card p-5 rounded-2xl h-48 flex items-center justify-center">
-                <p className="text-slate-500 text-sm">Map Integration</p>
+              {/* Map */}
+              <div className="glass-card rounded-2xl overflow-hidden h-48">
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0060%2C40.7128%2C-73.9352%2C40.7614&layer=mapnik&marker=40.7484%2C-73.9967"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Prime Estate Office Location"
+                  className="grayscale-[30%] hover:grayscale-0 transition-all duration-500"
+                />
               </div>
             </div>
 
@@ -115,51 +151,42 @@ export default function ContactPage() {
                   possible.
                 </p>
 
-                <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="mt-8 space-y-5"
+                >
                   <div className="grid md:grid-cols-2 gap-5">
-                    <FormField label="Full Name">
-                      <Input
-                        placeholder="John Doe"
-                        value={form.name}
-                        onChange={(e) =>
-                          setForm({ ...form, name: e.target.value })
-                        }
-                        required
-                      />
+                    <FormField label="Full Name" error={errors.name?.message}>
+                      <Input placeholder="John Doe" {...register("name")} />
                     </FormField>
 
-                    <FormField label="Email Address">
+                    <FormField
+                      label="Email Address"
+                      error={errors.email?.message}
+                    >
                       <Input
                         type="email"
                         placeholder="john@example.com"
-                        value={form.email}
-                        onChange={(e) =>
-                          setForm({ ...form, email: e.target.value })
-                        }
-                        required
+                        {...register("email")}
                       />
                     </FormField>
                   </div>
 
-                  <FormField label="Phone Number (optional)">
+                  <FormField
+                    label="Phone Number (optional)"
+                    error={errors.phone?.message}
+                  >
                     <Input
                       type="tel"
                       placeholder="+1 555 123 4567"
-                      value={form.phone}
-                      onChange={(e) =>
-                        setForm({ ...form, phone: e.target.value })
-                      }
+                      {...register("phone")}
                     />
                   </FormField>
 
-                  <FormField label="Message">
+                  <FormField label="Message" error={errors.message?.message}>
                     <Textarea
                       placeholder="Tell us about your requirements..."
-                      value={form.message}
-                      onChange={(e) =>
-                        setForm({ ...form, message: e.target.value })
-                      }
-                      required
+                      {...register("message")}
                     />
                   </FormField>
 
